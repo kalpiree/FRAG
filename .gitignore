@@ -16,6 +16,3 @@ outputs/*
 runs/*
 wandb/
 !data/.gitkeep
-!external/.gitkeep
-!models/.gitkeep
-!outputs/.gitkeep
