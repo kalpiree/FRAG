@@ -1,0 +1,5 @@
+model:
+  method: rallrec
+  external: true
+retrieval:
+  fixed_k: validation_mean

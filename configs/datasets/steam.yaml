@@ -1,0 +1,7 @@
+dataset:
+  name: steam
+  raw_dir: data/raw/steam
+  processed_dir: data/processed/steam
+  source_variant: ucsd-steam-reviews
+  interaction_file: steam_reviews.json.gz
+  item_file: steam_games.json.gz

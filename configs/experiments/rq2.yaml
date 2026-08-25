@@ -1,0 +1,45 @@
+name: rq2
+datasets:
+  - movielens
+  - lastfm
+  - steam
+  - goodreads
+method: frag
+seeds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+sweeps:
+  retrieval.tau_value:
+    - 0.1
+    - 0.2
+    - 0.3
+    - 0.4
+    - 0.5
+    - 0.6
+    - 0.7
+  fairness.lambda:
+    - 0.0
+    - 0.1
+    - 0.5
+    - 1.0
+    - 2.0
+    - 5.0
+  retrieval.gamma:
+    - 0.05
+    - 0.1
+    - 0.2
+    - 0.5
+  retrieval.kmax:
+    - 5
+    - 10
+    - 15
+    - 20
+  training.eta:
+    - 0.01
+    - 0.05
+    - 0.1
+    - 0.5
+    - 1.0

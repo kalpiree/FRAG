@@ -1,0 +1,4 @@
+model:
+  method: no_cumulative_state
+fairness:
+  state_mode: one_step

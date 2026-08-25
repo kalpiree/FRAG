@@ -1,0 +1,6 @@
+model:
+  method: fixed_relevance
+retrieval:
+  fixed_k: validation_mean
+fairness:
+  lambda: 0.0

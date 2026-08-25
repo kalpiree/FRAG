@@ -1,0 +1,5 @@
+model:
+  method: no_joint
+training:
+  joint_training: false
+  retriever_pretrain_tau: true

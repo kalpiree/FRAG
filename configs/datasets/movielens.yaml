@@ -1,0 +1,7 @@
+dataset:
+  name: movielens
+  raw_dir: data/raw/movielens
+  processed_dir: data/processed/movielens
+  source_variant: ml-1m
+  interaction_file: ratings.dat
+  item_file: movies.dat

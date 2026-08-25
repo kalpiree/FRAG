@@ -1,0 +1,7 @@
+dataset:
+  name: lastfm
+  raw_dir: data/raw/lastfm
+  processed_dir: data/processed/lastfm
+  source_variant: hetrec2011-lastfm-2k
+  interaction_file: user_taggedartists-timestamps.dat
+  item_file: artists.dat

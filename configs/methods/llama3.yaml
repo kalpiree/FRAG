@@ -1,0 +1,12 @@
+model:
+  method: llama3
+  generator:
+    include_candidates: false
+retrieval:
+  fixed_k: 0
+fairness:
+  lambda: 0.0
+training:
+  eta: 0.0
+  joint_training: false
+  retriever_pretrain_epochs: 0

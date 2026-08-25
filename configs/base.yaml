@@ -1,0 +1,106 @@
+project:
+  output_root: outputs
+  experiment: main
+dataset:
+  name: synthetic
+  raw_dir: data/raw/synthetic
+  processed_dir: data/processed/synthetic
+  interaction_file: interactions.csv
+  item_file: items.csv
+  user_column: user_id
+  item_column: item_id
+  time_column: timestamp
+  title_column: title
+  min_history: 3
+  min_user_events: 10
+  min_item_events: 1
+  train_ratio: 0.8
+  validation_ratio: 0.1
+  duplicate_policy: earliest
+  lastfm_event_policy: earliest_tag_event
+candidate_pool:
+  mode: stratified_frequency
+  size: 50
+  ensure_train_target: true
+  ensure_evaluation_target: true
+  exclude_history: true
+model:
+  method: frag
+  retriever:
+    embedding_dim: 256
+    history_encoder: gru
+    history_layers: 1
+    dropout: 0.1
+    score_activation: sigmoid
+    pretrained_path: null
+  generator:
+    backend: llama
+    model_id: meta-llama/Meta-Llama-3-8B
+    revision: 8cde5ca8380496c9a6cc7ef3a8b46a0372a1d920
+    local_path: models/meta-llama/Meta-Llama-3-8B
+    max_length: 512
+    max_answer_tokens: 32
+    max_title_tokens: 12
+    max_history_items: 20
+    scoring_batch_size: 4
+    include_candidates: true
+    ranking_mode: sequence_logprob
+    gradient_checkpointing: true
+    attn_implementation: sdpa
+    torch_dtype: bfloat16
+    lora_rank: 8
+    lora_alpha: 16
+    lora_dropout: 0.1
+    lora_targets:
+      - q_proj
+      - v_proj
+fairness:
+  groups: 2
+  target_shares:
+    - 0.5
+    - 0.5
+  lambda: 1.0
+  state_mode: cumulative
+retrieval:
+  tau_init: uniform
+  tau_low: 0.1
+  tau_high: 0.7
+  gamma: 0.1
+  kmax: 15.0
+  fixed_k: null
+  minimum_hard_size: 0
+training:
+  seed: 0
+  seeds:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+  epochs: 5
+  effective_batch_size: 128
+  micro_batch_size: 2
+  gradient_accumulation_steps: 64
+  learning_rate: 0.00002
+  retriever_learning_rate: 0.00002
+  tau_learning_rate: 0.00002
+  retriever_pretrain_learning_rate: 0.001
+  weight_decay: 0.0
+  eta: 0.1
+  warmup_ratio: 0.0
+  max_grad_norm: 1.0
+  mixed_precision: bf16
+  joint_training: true
+  retriever_pretrain_epochs: 1
+evaluation:
+  cutoff: 25
+  cfd_horizon: 20
+  short_set_policy: keep
+  paired_test: ttest_rel
+  significance_level: 0.01
+runtime:
+  device: cuda
+  num_workers: 4
+  save_optimizer: true
+  save_predictions: true
+  deterministic: true

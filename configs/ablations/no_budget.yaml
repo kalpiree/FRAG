@@ -1,0 +1,4 @@
+model:
+  method: no_budget
+training:
+  eta: 0.0

@@ -1,0 +1,17 @@
+name: rq4
+datasets:
+  - movielens
+methods:
+  - rallrec
+  - fairrag_fgr
+  - ltfair
+  - fixed_relevance
+  - frag
+seeds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+horizon: 20
+exposure_source: hard_retrieval

@@ -1,0 +1,4 @@
+model:
+  method: no_adaptive
+retrieval:
+  fixed_k: validation_mean

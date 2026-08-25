@@ -1,0 +1,22 @@
+repositories:
+  tallrec:
+    url: https://github.com/SAI990323/TALLRec.git
+    revision: c1db29ce6501bce32cc8c3e343c4eb14155beeb1
+  bigrec:
+    url: https://github.com/SAI990323/BIGRec.git
+    revision: bb4dd0a5f8867b66a6d3ee0080955649e51fe21a
+  rella:
+    url: https://github.com/LaVieEnRose365/ReLLa.git
+    revision: ac60dd6bbdfed459593216a25570566c2e0ca4af
+  rallrec:
+    url: https://github.com/JianXu95/RALLRec.git
+    revision: f994b1b3380ac2f2153f81eabf3023facbf937cb
+  ltfair:
+    url: https://github.com/TobyGE/FCPO.git
+    revision: 6997a2466ae0a498793078f04749a5622708c664
+  ifairlrs_rr:
+    url: https://github.com/JiangM-C/IFairLRS.git
+    revision: 992fafbebe7cb24e530ba151e96866ceba97af82
+  pmmf:
+    url: https://github.com/XuChen0427/P-MMF.git
+    revision: a3885835ee2c284c93550576d284bd46a5ccd168

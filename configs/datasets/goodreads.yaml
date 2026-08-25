@@ -1,0 +1,7 @@
+dataset:
+  name: goodreads
+  raw_dir: data/raw/goodreads
+  processed_dir: data/processed/goodreads
+  source_variant: goodreads-spoiler-raw
+  interaction_file: goodreads_reviews_spoiler_raw.json.gz
+  item_file: goodreads_books.json.gz

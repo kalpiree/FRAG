@@ -1,0 +1,19 @@
+name: rq3
+datasets:
+  - movielens
+  - lastfm
+  - steam
+  - goodreads
+methods:
+  - frag
+  - no_joint
+  - no_fairness
+  - no_cumulative_state
+  - no_adaptive
+  - no_budget
+seeds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4

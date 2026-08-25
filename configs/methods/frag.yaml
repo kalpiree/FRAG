@@ -1,0 +1,6 @@
+model:
+  method: frag
+fairness:
+  state_mode: cumulative
+training:
+  joint_training: true

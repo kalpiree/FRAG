@@ -1,0 +1,5 @@
+model:
+  method: pmmf
+  external: true
+retrieval:
+  fixed_k: validation_mean

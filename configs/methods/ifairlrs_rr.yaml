@@ -1,0 +1,5 @@
+model:
+  method: ifairlrs_rr
+  external: true
+retrieval:
+  fixed_k: validation_mean

@@ -1,0 +1,29 @@
+project:
+  output_root: outputs/smoke
+dataset:
+  name: synthetic
+  processed_dir: data/processed/synthetic
+  min_history: 2
+  min_user_events: 5
+candidate_pool:
+  mode: full_catalog
+model:
+  generator:
+    backend: tiny
+    max_length: 64
+    hidden_size: 32
+    layers: 1
+    heads: 4
+  retriever:
+    embedding_dim: 32
+training:
+  epochs: 1
+  effective_batch_size: 4
+  micro_batch_size: 4
+  gradient_accumulation_steps: 1
+  retriever_pretrain_epochs: 0
+evaluation:
+  short_set_policy: keep
+runtime:
+  device: cpu
+  num_workers: 0

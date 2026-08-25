@@ -1,0 +1,31 @@
+name: rq1
+datasets:
+  - movielens
+  - lastfm
+  - steam
+  - goodreads
+methods:
+  - llama3
+  - tallrec
+  - bigrec
+  - rella
+  - rallrec
+  - ltfair
+  - ifairlrs_rr
+  - pmmf
+  - fairrag_fgr
+  - frag
+seeds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+metrics:
+  - recall
+  - precision
+  - mrr
+  - ndcg
+  - ed
+  - wger
+  - gc

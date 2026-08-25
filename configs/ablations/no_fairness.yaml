@@ -1,0 +1,4 @@
+model:
+  method: no_fairness
+fairness:
+  lambda: 0.0

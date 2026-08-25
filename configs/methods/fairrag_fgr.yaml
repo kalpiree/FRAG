@@ -1,0 +1,5 @@
+model:
+  method: fairrag_fgr
+  external: true
+retrieval:
+  fixed_k: validation_mean
